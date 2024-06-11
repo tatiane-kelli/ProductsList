@@ -1,5 +1,5 @@
 .header {
-  background-color: #282c34;
+  background: linear-gradient(135deg, #827EB4, #5D5B8A, #2F2963, #534A85, #9B98C3, #B2A9E5);
   padding: 1rem;
   color: white;
   display: flex;
@@ -10,16 +10,25 @@
 
 .header h1 {
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.header nav a {
-  color: white;
-  margin: 0 1rem;
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav a:first-child {
+  color: #F4F3F7;
+  margin-left: 30px;
+  margin-right: 10px;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .header nav a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #C6C1D7;
 }
 
 /* search input */
@@ -33,7 +42,7 @@
 .searchInput {
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
-  color: #333333;
+  color: #9D9DBE;
   background-color: #f4f2f2;
   border: none;
   padding: 14px 72px 14px 42px;
@@ -54,7 +63,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
-  color: #999999;
+  color: #8585AD;
 }
 
 .searchButton {
@@ -75,5 +84,5 @@
 .searchIcon {
   height: 20px;
   width: 20px;
-  fill: #999999;
+  fill: #9D9DBE;
 }
