@@ -19,5 +19,54 @@
     "description": "Descrição do produto 3",
     "price": 149.99,
     "image": "https://via.placeholder.com/150"
+  }, 
+  {
+    "id": 4,
+    "name": "Produto 4",
+    "description": "Descrição do produto 4",
+    "price": 79.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "name": "Produto 5",
+    "description": "Descrição do produto 5",
+    "price": 149.50,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 6,
+    "name": "Produto 6",
+    "description": "Descrição do produto 6",
+    "price": 199.90,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 7,
+    "name": "Produto 7",
+    "description": "Descrição do produto 7",
+    "price": 89.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 8,
+    "name": "Produto 8",
+    "description": "Descrição do produto 8",
+    "price": 129.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 9,
+    "name": "Produto 9",
+    "description": "Descrição do produto 9",
+    "price": 200.00,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 10,
+    "name": "Produto 10",
+    "description": "Descrição do produto 10",
+    "price": 149.99,
+    "image": "https://via.placeholder.com/150"
   }
 ]

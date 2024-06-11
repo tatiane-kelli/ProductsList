@@ -16,10 +16,10 @@ function Header({ onSearch }: HeaderProps) {
 
   return (
     <header className="header">
-      <h1>LunarStore</h1>
+      <h1>Produtos</h1>
       <nav>
         <Link to="/">
-          Home
+          Início
         </Link>
         <Link to="/cart">
         <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
