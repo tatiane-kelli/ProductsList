@@ -23,6 +23,10 @@ function ProductList({ searchTerm, onProductClick }: ProductListProps) {
     setSelectedPriceRange(selectedRange || priceRanges[0]);
   };
 
+  function handleAddToCart() {
+    console.log('add to cart');
+  }
+
   const filteredProducts = productsData
     .filter((product) => 
       product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -48,6 +52,7 @@ function ProductList({ searchTerm, onProductClick }: ProductListProps) {
             key={product.id}
             product={product}
             onClick={() => onProductClick(product.id)}
+            onAddToCart={() => handleAddToCart()}
           />
         ))}
       </div>
