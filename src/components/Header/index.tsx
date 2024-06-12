@@ -4,12 +4,13 @@ import './styles.css';
 
 interface HeaderProps {
   onSearch: (term: string) => void;
+  cartItemCount: number;
 }
 
-function Header({ onSearch }: HeaderProps) {
+function Header({ onSearch, cartItemCount }: HeaderProps) {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  function handleSearchChange(event: React.ChangeEvent<HTMLInputElement>) {
     setSearchTerm(event.target.value);
     onSearch(event.target.value);
   };
@@ -27,6 +28,8 @@ function Header({ onSearch }: HeaderProps) {
           <circle cx="16.5" cy="20.5" r="0.5" fill="#221E48" stroke="#221E48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="0.5" cy="0.5" r="0.5" transform="matrix(1 0 0 -1 10 21)" fill="#221E48" stroke="#221E48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
+        {cartItemCount > 0 && 
+        <span className="cartItemCount">{cartItemCount}</span>}
         </Link>
       </nav>
       <form action="#" className="searchInputContainer">
