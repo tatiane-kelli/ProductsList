@@ -1,7 +1,6 @@
 .header {
-  background: linear-gradient(135deg, #827EB4, #5D5B8A, #2F2963, #534A85, #9B98C3, #B2A9E5);
   padding: 1rem;
-  color: white;
+  color: #221E48;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +18,7 @@
 }
 
 .header nav a:first-child {
-  color: #F4F3F7;
+  color: #221E48;
   margin-left: 30px;
   margin-right: 10px;
   text-decoration: none;
