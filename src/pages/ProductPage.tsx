@@ -10,8 +10,11 @@ interface Product {
   price: number;
   image: string;
 }
+interface ProductPageProps {
+  onAddToCart: (product: Product) => void;
+}
 
-function ProductPage() {
+function ProductPage({ onAddToCart }: ProductPageProps) {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
   const navigate = useNavigate();
@@ -23,9 +26,6 @@ function ProductPage() {
     }
   }, [id]);
 
-  const handleAddToCart = (product: Product) => {
-    // Adicionar lógica de adicionar ao carrinho aqui
-  };
 
   if (!id) {
     navigate('/');
@@ -35,7 +35,7 @@ function ProductPage() {
   return (
     <div>
       {product ? (
-        <ProductDetails product={product} onAddToCart={handleAddToCart} />
+        <ProductDetails product={product} onAddToCart={onAddToCart} />
       ) : (
         <p>Produto não encontrado :( </p>
       )}

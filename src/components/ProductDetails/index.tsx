@@ -13,13 +13,17 @@ interface ProductDetailsProps {
 }
 
 function ProductDetails({ product, onAddToCart }: ProductDetailsProps) {
+  function handleAddToCart() {
+    onAddToCart(product);
+  };
+
   return (
     <div className="productDetails">
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>{product.description}</p>
       <p className="productPrice">R$ {product.price.toFixed(2)}</p>
-      <button className="addToCartBtn" onClick={() => onAddToCart(product)}>
+      <button className="addToCartBtn" onClick={handleAddToCart}>
         <span className="btnCartIcon"> 
           <svg className="addToCartIcon" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.873 294.873" fill="#F4F3F7" transform="matrix(-1, 0, 0, 1, 0, 0)">
             <g id="SVGRepo_bgCarrier" stroke-width="0"/>

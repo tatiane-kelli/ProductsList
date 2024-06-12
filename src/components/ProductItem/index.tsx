@@ -1,6 +1,13 @@
 import React from 'react';
 import './styles.css';
 
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
 interface ProductItemProps {
   product: {
     id: number;
@@ -10,10 +17,16 @@ interface ProductItemProps {
     image: string;
   };
   onClick: (id: number) => void;
-  onAddToCart: (product: any) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 function ProductItem({ product, onClick, onAddToCart }: ProductItemProps) {
+  function handleAddToCart(e: React.MouseEvent<HTMLButtonElement>) {
+    e.stopPropagation();
+    onAddToCart(product);
+    console.log('adicionou')
+  }
+
   return (
     <div className="productItem" onClick={() => onClick(product.id)}>
       <div className="productItemImg">
@@ -30,7 +43,7 @@ function ProductItem({ product, onClick, onAddToCart }: ProductItemProps) {
               <path d="M20.188 10.9343C20.5762 11.4056 20.7703 11.6412 20.7703 12C20.7703 12.3588 20.5762 12.5944 20.188 13.0657C18.7679 14.7899 15.6357 18 12 18C8.36427 18 5.23206 14.7899 3.81197 13.0657C3.42381 12.5944 3.22973 12.3588 3.22973 12C3.22973 11.6412 3.42381 11.4056 3.81197 10.9343C5.23206 9.21014 8.36427 6 12 6C15.6357 6 18.7679 9.21014 20.188 10.9343Z" stroke="#221E48" stroke-width="2"/>
               </svg>
             </button>
-            <button className="addToCart" onClick={() => onAddToCart(product)}>
+            <button className="addToCart" onClick={handleAddToCart}>
               <span className="cartIcon"> 
                 <svg className="icon" width="20px" height="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 294.873 294.873" fill="#221E48" transform="matrix(-1, 0, 0, 1, 0, 0)">
                   <g id="SVGRepo_bgCarrier" stroke-width="0"/>
