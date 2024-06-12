@@ -16,7 +16,6 @@ function Header({ onSearch }: HeaderProps) {
 
   return (
     <header className="header">
-      <h1>Produtos</h1>
       <nav>
         <Link to="/">
           Início
