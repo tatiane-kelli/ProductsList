@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "name": "Produto 1",
-    "description": "Descrição do produto 1",
+    "name": "Mouse Gamer Logitech G203",
+    "description": "Mouse gamer com sensor de alta precisão e iluminação RGB personalizável.",
     "price": 49.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/112948/mouse-gamer-logitech-g203-rgb-lightsync-6-botoes-8000-dpi-preto-910-005793_1612880277_g.jpg"
   },
   {
     "id": 2,
-    "name": "Produto 2",
-    "description": "Descrição do produto 2",
+    "name": "Teclado Mecânico HyperX Alloy FPS",
+    "description": "Teclado mecânico com switches Cherry MX e design compacto para FPS.",
     "price": 99.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/105009/teclado-mecanico-gamer-hyperx-alloy-origins-core-rgb-hx-kb7rdx-br_1574693479_g.jpg"
   },
   {
     "id": 3,
-    "name": "Produto 3",
-    "description": "Descrição do produto 3",
+    "name": "Monitor Dell 24\" Full HD - S2421HN",
+    "description": "Monitor de 24 polegadas com resolução Full HD e tecnologia IPS.",
     "price": 149.99,
-    "image": "https://via.placeholder.com/150"
-  }, 
+    "image": "https://i.dell.com/is/image/DellContent//content/dam/images/products/electronics-and-accessories/dell/monitors/s-series/s2421hn/s2421hn-cfp-00025rf095-gy.psd?fmt=png-alpha&pscan=auto&scl=1&hei=476&wid=522&qlt=100,1&resMode=sharp2&size=522,476&chrss=full"
+  },
   {
     "id": 4,
-    "name": "Produto 4",
-    "description": "Descrição do produto 4",
+    "name": "Headset Gamer Razer Kraken",
+    "description": "Headset gamer com som surround 7.1 e microfone retrátil.",
     "price": 79.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/r/z/rz04-02950100x3.jpg"
   },
   {
     "id": 5,
-    "name": "Produto 5",
-    "description": "Descrição do produto 5",
+    "name": "SSD Kingston A400 480GB",
+    "description": "480GB de capacidade e alta velocidade de leitura e gravação.",
     "price": 149.50,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/85198/85198_1484306114_gg.jpg"
   },
   {
     "id": 6,
-    "name": "Produto 6",
-    "description": "Descrição do produto 6",
+    "name": "Placa de Vídeo NVIDIA GeForce GTX 1660",
+    "description": "Placa de vídeo com 6GB GDDR5 e excelente desempenho para jogos.",
     "price": 199.90,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/115753/placa-de-video-galax-nvidia-geforce-gtx-1650-ex-plus-1-click-oc-4gb-gddr6-65sql8ds93e1_1596552493_gg.jpg"
   },
   {
     "id": 7,
-    "name": "Produto 7",
-    "description": "Descrição do produto 7",
+    "name": "Cadeira Gamer DT3 Sports",
+    "description": "Cadeira gamer ergonômica com ajustes de altura e inclinação.",
     "price": 89.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/104279/cadeira-gamer-dt3sports-rhino-black-11229-5_cadeira-gamer-dt3sports-rhino-black-11229-5_1568896345_gg.jpg"
   },
   {
     "id": 8,
-    "name": "Produto 8",
-    "description": "Descrição do produto 8",
+    "name": "Processador Intel Core i5-10400F",
+    "description": "Processador de 10ª geração com 6 núcleos e 12 threads.",
     "price": 129.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/112991/processador-intel-core-i5-10400f-cache-12mb-2-9ghz-lga-1200-bx8070110400f_1589199927_gg.jpg"
   },
   {
     "id": 9,
-    "name": "Produto 9",
-    "description": "Descrição do produto 9",
-    "price": 200.00,
-    "image": "https://via.placeholder.com/150"
+    "name": "Memória RAM Corsair Vengeance 8GB",
+    "description": "Módulo de memória RAM DDR4 de 8GB com alta frequência.",
+    "price": 39.99,
+    "image": "https://images.kabum.com.br/produtos/fotos/229176/memoria-corsair-vengeance-lpx-8gb-3200mhz-ddr4-cl16-preta-cmk8gx4m1e3200c16_1631635307_gg.jpg"
   },
   {
     "id": 10,
-    "name": "Produto 10",
-    "description": "Descrição do produto 10",
+    "name": "Gabinete NZXT H510, Flow Compact",
+    "description": "Gabinete mid-tower com design moderno e excelente fluxo de ar.",
     "price": 149.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://images.kabum.com.br/produtos/fotos/392076/gabinete-nzxt-h5-flow-compact-mid-tower-rgb-atx-lateral-e-frontal-em-vidro-temperado-2x-cooler-fan-preto-cc-h51fb-01_1666613235_gg.jpg"
   }
 ]
