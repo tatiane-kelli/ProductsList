@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
@@ -17,6 +17,12 @@ interface CartProps {
 
 function Cart({ cart }: CartProps) {
   const navigate = useNavigate();
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const total = cart.reduce((acc, item) => acc + item.price, 0);
+    setTotalPrice(total);
+  }, [cart]);
 
   function handleGoToCheckout() {
     navigate('/checkout');
@@ -51,6 +57,9 @@ function Cart({ cart }: CartProps) {
               </>
             ))}
           </ul>
+          <div className="totalPrice">
+            <span>Total: R${totalPrice.toFixed(2)}</span>
+          </div>
           <button className="goToPayment" onClick={handleGoToCheckout}>Finalizar compra</button>
         </>
       )}

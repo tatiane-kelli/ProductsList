@@ -75,6 +75,15 @@
   border-radius: 50px;
 }
 
+.totalPrice {
+  display: flex;
+  color: #333;
+  font-weight: 700;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 25px;
+}
+
 .goToPayment {
   width: 240px;
   height: 40px;
