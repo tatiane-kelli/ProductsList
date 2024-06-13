@@ -108,3 +108,38 @@
   border: 2px solid #221E48;
   background: transparent;
 }
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 280px;
+    padding: 20px;
+  }
+  .form .label .title {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 90%;
+    max-width: 350px;
+  }
+  .form .split {
+    flex-direction: column;
+  }
+  .form .split label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form .input-field {
+    height: 45px;
+  }
+  .form .checkoutBtn {
+    padding: 15px 0;
+    font-size: 18px;
+  }
+}
+

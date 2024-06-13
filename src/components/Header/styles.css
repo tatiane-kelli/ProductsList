@@ -100,3 +100,17 @@
   width: 20px;
   fill: #9D9DBE;
 }
+
+@media screen and (max-width: 600px) {
+  .searchInputContainer {
+    flex: 1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .searchInput {
+    width: 100%;
+    padding: 14px 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
