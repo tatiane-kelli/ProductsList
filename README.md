@@ -43,4 +43,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deploy
+You may access the project in the production build following the link: https://productslist-one.vercel.app
+
+## Other informations
+### Color pallete
+[Click here](https://coolors.co/221e48-8585ad-f4f3f7-f0eeee-333333-c6c1d7-9b98c3-5d5b8a-f4f2f2-9d9dbe) to see the color pallete used in this project.
