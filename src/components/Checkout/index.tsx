@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InputMask from 'react-input-mask';
 import './styles.css';
 
 interface CheckoutProps {
@@ -22,6 +23,18 @@ function Checkout({ items, onPaymentSuccess, onPaymentFailure, clearCart }: Chec
     }
   }
 
+  function handleCardNumberChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setCardNumber(e.target.value);
+  };
+
+  function handleExpiryDateChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setExpiryDate(e.target.value);
+  };
+
+  function handleCvvChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setCvv(e.target.value);
+  };
+
   return (
     <div className="checkout">
       <h2 className="checkoutTitle">Checkout</h2>
@@ -33,48 +46,48 @@ function Checkout({ items, onPaymentSuccess, onPaymentFailure, clearCart }: Chec
             className="input-field"
             type="text"
             name="input-name"
-            title="Input title"
+            title="Name"
             placeholder="Insira seu nome completo"
           />
         </label>
         <label className="label">
-          <span className="title">Card Number</span>
-          <input
-            id="serialCardNumber"
+          <span className="title">Número do cartão</span>
+          <InputMask
+            mask="9999 9999 9999 9999"
             className="input-field"
-            type="number"
+            type="text"
             name="input-name"
-            title="Input title"
+            title="Card Number"
             placeholder="0000 0000 0000 0000"
             value={cardNumber}
-            onChange={(e) => setCardNumber(e.target.value)}
+            onChange={handleCardNumberChange}
           />
         </label>
         <div className="split">
           <label className="label">
             <span className="title">Data de validade</span>
-            <input
-              id="ExDate"
+            <InputMask
+              mask="99/99"
               className="input-field"
               type="text"
               name="input-name"
               title="Expiry Date"
-              placeholder="XX/XX"
+              placeholder="MM/YY"
               value={expiryDate}
-              onChange={(e) => setExpiryDate(e.target.value)}
+              onChange={handleExpiryDateChange}
             />
           </label>
           <label className="label">
             <span className="title">CVV</span>
-            <input
-              id="cvv"
+            <InputMask
+              mask="999"
               className="input-field"
-              type="number"
+              type="text"
               name="cvv"
               title="CVV"
               placeholder="CVV"
-              value={cvv} 
-              onChange={(e) => setCvv(e.target.value)}
+              value={cvv}
+              onChange={handleCvvChange}
             />
           </label>
         </div>
