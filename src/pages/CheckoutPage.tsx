@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Checkout from '../components/Checkout';
 import { useNavigate } from 'react-router-dom';
 
-function CheckoutPage() {
-  const [cartItems, setCartItems] = useState([]);
-  const navigate = useNavigate();
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
 
-  function clearCart() {
-    setCartItems([]);
-  }
+interface CartItem extends Product {
+  onRemoveFromCart: () => void;
+}
+
+interface CheckoutPageProps {
+  cart: CartItem[];
+  clearCart: () => void;
+}
+
+function CheckoutPage({ cart, clearCart }: CheckoutPageProps) {
+  const navigate = useNavigate();
 
   function handlePaymentSuccess() {
     alert('Pagamento realizado com sucesso! ✅ Agradecemos pela compra');
@@ -24,7 +36,7 @@ function CheckoutPage() {
   return (
     <div>
       <Checkout 
-        items={cartItems} 
+        items={cart} 
         onPaymentSuccess={handlePaymentSuccess} 
         onPaymentFailure={handlePaymentFailure} 
         clearCart={clearCart}

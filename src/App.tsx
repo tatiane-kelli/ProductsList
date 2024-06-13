@@ -30,11 +30,15 @@ function App() {
     const newItem: CartItem = { ...product, onRemoveFromCart: () => handleRemoveFromCart(product.id) };
     setCart([...cart, newItem]);
   }
-  
+
   function handleRemoveFromCart(id: number) {
     setCart(cart.filter(item => item.id !== id));
   }
-  
+
+  function clearCart() {
+    setCart([]);
+  }
+
   return (
     <Router>
       <div className="app">
@@ -44,7 +48,7 @@ function App() {
             <Route path="/" element={<Home searchTerm={searchTerm} onAddToCart={handleAddToCart} />} />
             <Route path="/product/:id" element={<ProductPage onAddToCart={handleAddToCart} />} />
             <Route path="/cart" element={<Cart cart={cart} />} />
-            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/checkout" element={<CheckoutPage cart={cart} clearCart={clearCart} />} />
           </Routes>
         </main>
       </div>
