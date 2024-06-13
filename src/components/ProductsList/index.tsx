@@ -3,9 +3,17 @@ import ProductItem from '../ProductItem';
 import productsData from '../../data/products.json';
 import './styles.css';
 
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
 interface ProductListProps {
   searchTerm: string;
   onProductClick: (id: number) => void;
+  onAddToCart: (product: Product) => void;
 }
 
 const priceRanges = [
@@ -15,17 +23,13 @@ const priceRanges = [
   { label: 'R$ 101 - R$ 200', min: 101, max: 200 },
 ];
 
-function ProductList({ searchTerm, onProductClick }: ProductListProps) {
+function ProductList({ searchTerm, onProductClick, onAddToCart }: ProductListProps) {
   const [selectedPriceRange, setSelectedPriceRange] = useState(priceRanges[0]);
 
   function handlePriceRangeChange(event: React.ChangeEvent<HTMLSelectElement>) {
     const selectedRange = priceRanges.find(range => range.label === event.target.value);
     setSelectedPriceRange(selectedRange || priceRanges[0]);
   };
-
-  function handleAddToCart() {
-    console.log('add to cart');
-  }
 
   const filteredProducts = productsData
     .filter((product) => 
@@ -52,7 +56,7 @@ function ProductList({ searchTerm, onProductClick }: ProductListProps) {
             key={product.id}
             product={product}
             onClick={() => onProductClick(product.id)}
-            onAddToCart={() => handleAddToCart()}
+            onAddToCart={() => onAddToCart(product)}
           />
         ))}
       </div>

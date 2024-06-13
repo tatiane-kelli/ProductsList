@@ -41,7 +41,7 @@ function App() {
         <Header onSearch={handleSearch} cartItemCount={cart.length} />
         <main>
           <Routes>
-            <Route path="/" element={<Home searchTerm={searchTerm} />} />
+            <Route path="/" element={<Home searchTerm={searchTerm} onAddToCart={handleAddToCart} />} />
             <Route path="/product/:id" element={<ProductPage onAddToCart={handleAddToCart} />} />
             <Route path="/cart" element={<Cart cart={cart} />} />
             <Route path="/checkout" element={<CheckoutPage />} />
