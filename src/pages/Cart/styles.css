@@ -107,3 +107,15 @@
 .goToPayment:hover {
   background-color: #221E48;
 }
+
+@media (max-width: 640px) {
+  .removeFromCartBtn {
+    max-width: 40px;
+    border-radius: 25px;
+  }
+
+  .removeFromCartBtn p {
+    display: none;
+  }
+}
+
